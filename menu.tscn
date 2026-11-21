@@ -1,0 +1,136 @@
+[gd_scene format=3 uid="uid://p5t8t5i4j18v"]
+
+[ext_resource type="Script" uid="uid://d3en2xlsnwii7" path="res://menu.gd" id="1_l48gv"]
+[ext_resource type="Texture2D" uid="uid://f4ohr2lbdvq4" path="res://backgroundmenu.png" id="1_lti8b"]
+[ext_resource type="Texture2D" uid="uid://ge3by8qjklfc" path="res://btnplayoff.png" id="2_ytr4m"]
+[ext_resource type="Texture2D" uid="uid://hb3hjatxnv1l" path="res://btnexitoff.png" id="4_ecwwl"]
+[ext_resource type="AudioStream" uid="uid://cmhhq0jlds0eb" path="res://menumusic.mp3" id="5_ytr4m"]
+
+[sub_resource type="Animation" id="Animation_l48gv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ecwwl"]
+resource_name = "fade_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_kk3ma"]
+resource_name = "fade_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nrnbx"]
+_data = {
+&"RESET": SubResource("Animation_l48gv"),
+&"fade_in": SubResource("Animation_ecwwl"),
+&"fade_out": SubResource("Animation_kk3ma")
+}
+
+[node name="Menu" type="Control" unique_id=126870551]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_l48gv")
+
+[node name="Background" type="TextureRect" parent="." unique_id=268280932]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_lti8b")
+
+[node name="Playbtn" type="TextureButton" parent="." unique_id=1728744586]
+layout_mode = 0
+offset_left = 9.279009
+offset_top = 50.505398
+offset_right = 133.19731
+offset_bottom = 77.84131
+rotation = -0.18325958
+stretch_mode = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="Playbtn" unique_id=259888705]
+position = Vector2(63.00039, 15.230546)
+rotation = 0.18325956
+scale = Vector2(1.326718, 1.3267175)
+texture = ExtResource("2_ytr4m")
+
+[node name="Exitbtn" type="TextureButton" parent="." unique_id=1118104727]
+layout_mode = 0
+offset_left = 17.000002
+offset_top = 90.00001
+offset_right = 140.918
+offset_bottom = 117.336006
+rotation = 0.17453292
+stretch_mode = 0
+
+[node name="Sprite2Dexit" type="Sprite2D" parent="Exitbtn" unique_id=600216707]
+position = Vector2(62.90872, 11.246868)
+rotation = -0.17453292
+scale = Vector2(1.327, 1.327)
+texture = ExtResource("4_ecwwl")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1418936193]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=52781952]
+libraries/ = SubResource("AnimationLibrary_nrnbx")
+
+[node name="Music" type="AudioStreamPlayer2D" parent="." unique_id=2085185115]
+stream = ExtResource("5_ytr4m")
+parameters/looping = true
+
+[connection signal="button_down" from="Playbtn" to="." method="_on_playbtn_button_down"]
+[connection signal="button_up" from="Playbtn" to="." method="_on_playbtn_button_up"]
+[connection signal="mouse_entered" from="Playbtn" to="." method="_on_playbtn_mouse_entered"]
+[connection signal="mouse_exited" from="Playbtn" to="." method="_on_playbtn_mouse_exited"]
+[connection signal="pressed" from="Playbtn" to="." method="_on_playbtn_pressed"]
+[connection signal="button_down" from="Exitbtn" to="." method="_on_exitbtn_button_down"]
+[connection signal="button_up" from="Exitbtn" to="." method="_on_exitbtn_button_up"]
+[connection signal="mouse_entered" from="Exitbtn" to="." method="_on_exitbtn_mouse_entered"]
+[connection signal="mouse_exited" from="Exitbtn" to="." method="_on_exitbtn_mouse_exited"]
+[connection signal="pressed" from="Exitbtn" to="." method="_on_exitbtn_pressed"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

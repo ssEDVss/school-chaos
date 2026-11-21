@@ -1,0 +1,724 @@
+[gd_scene format=3 uid="uid://b4j8tcacfl5d"]
+
+[ext_resource type="Script" uid="uid://c1egxc7u5suhl" path="res://classroom.gd" id="1_2hgm5"]
+[ext_resource type="Texture2D" uid="uid://clunmlxywrb1p" path="res://backgroundclassroom.png" id="1_ysqh3"]
+[ext_resource type="PackedScene" uid="uid://d4j38vjm47o2w" path="res://player.tscn" id="3_wx4mr"]
+[ext_resource type="Texture2D" uid="uid://bewgy1ursoblt" path="res://blackcolorscreen.png" id="4_wnraa"]
+[ext_resource type="Texture2D" uid="uid://cxlgvs2pib0dm" path="res://chairmiddleschool.png" id="5_dju2y"]
+[ext_resource type="Texture2D" uid="uid://1k18y0pphju3" path="res://deskmiddleschool.png" id="5_pq1j3"]
+[ext_resource type="Texture2D" uid="uid://lpajxsot6jfg" path="res://windowbase.png" id="6_0hcv4"]
+[ext_resource type="Texture2D" uid="uid://bf2vykt1doium" path="res://deskteacher.png" id="6_5aa18"]
+[ext_resource type="Texture2D" uid="uid://b5nd0fsusi3uw" path="res://board.png" id="6_6e7js"]
+[ext_resource type="Texture2D" uid="uid://3dar1jr31k7j" path="res://flower.png" id="7_37esg"]
+[ext_resource type="Texture2D" uid="uid://bhchvr8f8o2ph" path="res://mateback4.png" id="8_v6oqn"]
+[ext_resource type="Texture2D" uid="uid://dmafxtdn8bi8t" path="res://sink.png" id="11_5spf0"]
+[ext_resource type="Texture2D" uid="uid://dhwfb11qducy" path="res://door.png" id="12_ubcxn"]
+[ext_resource type="PackedScene" uid="uid://51665vl8powi" path="res://friend.tscn" id="13_lxqy8"]
+[ext_resource type="Texture2D" uid="uid://bl7cgscbpl7ln" path="res://mateback1.png" id="15_1h0yc"]
+[ext_resource type="Texture2D" uid="uid://v4hott4ghlkm" path="res://mateback2.png" id="16_ct2yb"]
+[ext_resource type="Texture2D" uid="uid://cw26n5ghlv22c" path="res://mateback3.png" id="17_b5xur"]
+[ext_resource type="PackedScene" uid="uid://bqb34tb17kado" path="res://teacher.tscn" id="18_1h0yc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wx4mr"]
+size = Vector2(19, 212)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wnraa"]
+size = Vector2(367, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pq1j3"]
+size = Vector2(19, 212.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dju2y"]
+size = Vector2(67, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5aa18"]
+size = Vector2(79, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6e7js"]
+size = Vector2(236, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0hcv4"]
+size = Vector2(64, 93.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_37esg"]
+size = Vector2(63, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5spf0"]
+size = Vector2(1, 45.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ubcxn"]
+size = Vector2(62, 1.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nfkg8"]
+size = Vector2(60, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1h0yc"]
+size = Vector2(19, 18)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ccl3g"]
+size = Vector2(71, 32.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pubde"]
+size = Vector2(21, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lxqy8"]
+size = Vector2(48, 21)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v6oqn"]
+size = Vector2(33, 22)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ct2yb"]
+size = Vector2(34, 22)
+
+[sub_resource type="Animation" id="Animation_l48gv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FAAAAAADDEEEE:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ecwwl"]
+resource_name = "fade_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FAAAAAADDEEEE:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_kk3ma"]
+resource_name = "fade_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FAAAAAADDEEEE:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2hgm5"]
+_data = {
+&"RESET": SubResource("Animation_l48gv"),
+&"fade_in": SubResource("Animation_ecwwl"),
+&"fade_out": SubResource("Animation_kk3ma")
+}
+
+[node name="Classroom" type="Control" unique_id=473248616]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2hgm5")
+
+[node name="blackcolor" type="TextureRect" parent="." unique_id=140354474]
+z_index = -2
+layout_mode = 0
+offset_left = -183.0
+offset_top = -136.0
+offset_right = 504.0
+offset_bottom = 314.0
+texture = ExtResource("4_wnraa")
+
+[node name="backgroundroom" type="TextureRect" parent="." unique_id=1938325123]
+z_index = -1
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -382.0
+offset_top = -202.0
+offset_right = 2.0
+offset_bottom = 14.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("1_ysqh3")
+
+[node name="Door" type="Sprite2D" parent="." unique_id=338631769]
+position = Vector2(312, 26)
+texture = ExtResource("12_ubcxn")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1698451725]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1347228723]
+position = Vector2(-57, 85)
+shape = SubResource("RectangleShape2D_wx4mr")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=455827250]
+position = Vector2(132.5, -11)
+shape = SubResource("RectangleShape2D_wnraa")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=239898884]
+position = Vector2(314, 84.25)
+shape = SubResource("RectangleShape2D_pq1j3")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=1110937457]
+position = Vector2(-23.5, 184)
+shape = SubResource("RectangleShape2D_dju2y")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D" unique_id=1977373198]
+position = Vector2(271.5, 184)
+shape = SubResource("RectangleShape2D_5aa18")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D" unique_id=1506575543]
+position = Vector2(117.5, 190)
+shape = SubResource("RectangleShape2D_6e7js")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D" unique_id=59164245]
+position = Vector2(22, 109.5)
+shape = SubResource("RectangleShape2D_0hcv4")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D" unique_id=1777878302]
+position = Vector2(228, 109.75)
+shape = SubResource("RectangleShape2D_0hcv4")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="StaticBody2D" unique_id=425937446]
+position = Vector2(125, 133)
+shape = SubResource("RectangleShape2D_37esg")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="StaticBody2D" unique_id=1020599708]
+position = Vector2(94, 86.75)
+shape = SubResource("RectangleShape2D_5spf0")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="StaticBody2D" unique_id=891975198]
+position = Vector2(156, 87.5)
+shape = SubResource("RectangleShape2D_5spf0")
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="StaticBody2D" unique_id=1997971787]
+position = Vector2(125, 63.75)
+shape = SubResource("RectangleShape2D_ubcxn")
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="StaticBody2D" unique_id=1470456815]
+position = Vector2(76, 32)
+shape = SubResource("RectangleShape2D_nfkg8")
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="StaticBody2D" unique_id=503742015]
+position = Vector2(228.5, 6)
+shape = SubResource("RectangleShape2D_1h0yc")
+
+[node name="desks_and_chairs_notplayer" type="TextureRect" parent="." unique_id=1179232032]
+layout_mode = 0
+offset_left = 92.0
+offset_top = 110.0
+offset_right = 158.0
+offset_bottom = 143.0
+texture = ExtResource("5_pq1j3")
+
+[node name="TextureRect" type="TextureRect" parent="desks_and_chairs_notplayer" unique_id=403007004]
+layout_mode = 0
+offset_left = 103.0
+offset_top = -1.0
+offset_right = 169.0
+offset_bottom = 32.0
+texture = ExtResource("5_pq1j3")
+
+[node name="TextureRect2" type="TextureRect" parent="desks_and_chairs_notplayer/TextureRect" unique_id=897684542]
+layout_mode = 0
+offset_left = -206.0
+offset_right = -140.0
+offset_bottom = 33.0
+texture = ExtResource("5_pq1j3")
+
+[node name="TextureRect2" type="TextureRect" parent="desks_and_chairs_notplayer/TextureRect/TextureRect2" unique_id=1551658871]
+layout_mode = 0
+offset_left = -13.0
+offset_top = -28.0
+offset_right = 53.0
+offset_bottom = 5.0
+texture = ExtResource("5_dju2y")
+
+[node name="TextureRect4" type="TextureRect" parent="desks_and_chairs_notplayer/TextureRect/TextureRect2" unique_id=467352962]
+z_index = 19
+layout_mode = 0
+offset_left = -13.0
+offset_top = 21.0
+offset_right = 53.0
+offset_bottom = 54.0
+texture = ExtResource("5_dju2y")
+
+[node name="TextureRect5" type="TextureRect" parent="desks_and_chairs_notplayer/TextureRect/TextureRect2" unique_id=1523422812]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 21.0
+offset_right = 84.0
+offset_bottom = 54.0
+texture = ExtResource("5_dju2y")
+
+[node name="TextureRect6" type="TextureRect" parent="desks_and_chairs_notplayer/TextureRect/TextureRect2" unique_id=706053401]
+layout_mode = 0
+offset_left = 90.0
+offset_top = 22.0
+offset_right = 156.0
+offset_bottom = 55.0
+texture = ExtResource("5_dju2y")
+
+[node name="TextureRect7" type="TextureRect" parent="desks_and_chairs_notplayer/TextureRect/TextureRect2" unique_id=2011976983]
+layout_mode = 0
+offset_left = 121.0
+offset_top = 22.0
+offset_right = 187.0
+offset_bottom = 55.0
+texture = ExtResource("5_dju2y")
+
+[node name="TextureRect8" type="TextureRect" parent="desks_and_chairs_notplayer/TextureRect/TextureRect2" unique_id=2142541032]
+z_index = 19
+layout_mode = 0
+offset_left = 193.0
+offset_top = 21.0
+offset_right = 259.0
+offset_bottom = 54.0
+texture = ExtResource("5_dju2y")
+
+[node name="TextureRect9" type="TextureRect" parent="desks_and_chairs_notplayer/TextureRect/TextureRect2" unique_id=881186275]
+layout_mode = 0
+offset_left = 225.0
+offset_top = 21.0
+offset_right = 291.0
+offset_bottom = 54.0
+texture = ExtResource("5_dju2y")
+
+[node name="Windowbase" type="Sprite2D" parent="desks_and_chairs_notplayer/TextureRect/TextureRect2" unique_id=2137891887]
+position = Vector2(-34, -73)
+texture = ExtResource("6_0hcv4")
+
+[node name="Windowbase2" type="Sprite2D" parent="desks_and_chairs_notplayer/TextureRect/TextureRect2" unique_id=1244459831]
+position = Vector2(-34, 25)
+texture = ExtResource("6_0hcv4")
+
+[node name="Mateback4" type="Sprite2D" parent="desks_and_chairs_notplayer/TextureRect/TextureRect2" unique_id=112737623]
+z_index = 18
+position = Vector2(18, 25)
+texture = ExtResource("8_v6oqn")
+
+[node name="nPlayerChair2" type="TextureRect" parent="desks_and_chairs_notplayer" unique_id=1699785908]
+z_index = 222
+layout_mode = 0
+offset_left = -13.0
+offset_top = -29.0
+offset_right = 53.0
+offset_bottom = 4.0
+texture = ExtResource("5_dju2y")
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=1014338750]
+
+[node name="pause" type="Button" parent="UI" unique_id=1843686665]
+z_index = 19
+offset_left = 290.0
+offset_top = 9.0
+offset_right = 309.0
+offset_bottom = 31.0
+theme_override_font_sizes/font_size = 10
+text = "||"
+
+[node name="upbtn" type="Button" parent="UI" unique_id=515383114]
+offset_left = 34.0
+offset_top = 112.0
+offset_right = 59.0
+offset_bottom = 137.0
+theme_override_font_sizes/font_size = 12
+text = "↑"
+
+[node name="downbtn" type="Button" parent="UI" unique_id=1199184292]
+offset_left = 34.0
+offset_top = 143.0
+offset_right = 59.0
+offset_bottom = 168.0
+theme_override_font_sizes/font_size = 12
+text = "↓"
+
+[node name="leftbtn" type="Button" parent="UI" unique_id=361161352]
+offset_left = 6.0
+offset_top = 127.0
+offset_right = 31.0
+offset_bottom = 152.0
+theme_override_font_sizes/font_size = 12
+text = "←"
+
+[node name="rightbtn" type="Button" parent="UI" unique_id=968222811]
+offset_left = 62.0
+offset_top = 127.0
+offset_right = 87.0
+offset_bottom = 152.0
+theme_override_font_sizes/font_size = 12
+text = "→ "
+
+[node name="interactbtn" type="Button" parent="UI" unique_id=1767078255]
+offset_left = 278.0
+offset_top = 132.0
+offset_right = 304.0
+offset_bottom = 157.0
+theme_override_font_sizes/font_size = 12
+text = "o"
+
+[node name="StatusUI" type="Control" parent="UI" unique_id=1994671650]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 4.0
+offset_top = -15.0
+offset_right = 44.0
+offset_bottom = 25.0
+
+[node name="RespectLabel" type="Label" parent="UI/StatusUI" unique_id=291694454]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 17.0
+offset_right = 62.0
+offset_bottom = 40.0
+
+[node name="SuspicionLabel" type="Label" parent="UI/StatusUI" unique_id=1948582191]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 42.0
+offset_right = 60.0
+offset_bottom = 65.0
+
+[node name="Player" parent="." unique_id=811829643 instance=ExtResource("3_wx4mr")]
+position = Vector2(201, 55)
+
+[node name="friend" parent="." unique_id=1989889066 instance=ExtResource("13_lxqy8")]
+z_index = 7
+position = Vector2(76, 107)
+
+[node name="PlayerBoardContact" type="Control" parent="." unique_id=78762736]
+z_index = 2
+anchors_preset = 0
+offset_left = 130.0
+offset_right = 170.0
+offset_bottom = 40.0
+
+[node name="board" type="TextureRect" parent="PlayerBoardContact" unique_id=1456458260]
+z_index = -1
+layout_mode = 0
+offset_left = -5.0
+offset_top = -19.0
+offset_right = 61.0
+offset_bottom = 9.0
+texture = ExtResource("6_6e7js")
+
+[node name="InteractBoard" type="Area2D" parent="PlayerBoardContact" unique_id=1417575731]
+position = Vector2(27, 3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerBoardContact/InteractBoard" unique_id=546985794]
+position = Vector2(1, 7)
+shape = SubResource("RectangleShape2D_ccl3g")
+
+[node name="PlayerWindowContact" type="Control" parent="." unique_id=816680162]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="windowpl" type="TextureRect" parent="PlayerWindowContact" unique_id=1143861759]
+layout_mode = 0
+offset_left = -60.0
+offset_top = 68.0
+offset_right = -29.0
+offset_bottom = 99.0
+texture = ExtResource("6_0hcv4")
+
+[node name="InteractWindow" type="Area2D" parent="PlayerWindowContact" unique_id=1797096286]
+position = Vector2(-46, 83)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerWindowContact/InteractWindow" unique_id=1574671272]
+position = Vector2(0.5, 1)
+shape = SubResource("RectangleShape2D_pubde")
+
+[node name="PlayerDeskContact" type="Control" parent="." unique_id=2023686897]
+anchors_preset = 0
+offset_left = 3.0
+offset_top = 11.0
+offset_right = 43.0
+offset_bottom = 51.0
+
+[node name="InteractZoneDesk" type="Area2D" parent="PlayerDeskContact" unique_id=1322155295]
+position = Vector2(128, 70)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDeskContact/InteractZoneDesk" unique_id=1960077384]
+position = Vector2(22, 17)
+shape = SubResource("RectangleShape2D_lxqy8")
+
+[node name="SeatPoint" type="Marker2D" parent="PlayerDeskContact" unique_id=264013699]
+position = Vector2(138, 88)
+
+[node name="ExitPoint" type="Marker2D" parent="PlayerDeskContact" unique_id=1378233272]
+position = Vector2(164, 86)
+
+[node name="PlayerFlowerContact" type="Control" parent="." unique_id=873309342]
+z_index = 12
+anchors_preset = 0
+offset_left = 238.0
+offset_top = 173.0
+offset_right = 278.0
+offset_bottom = 213.0
+
+[node name="flowerpl" type="TextureRect" parent="PlayerFlowerContact" unique_id=1149033098]
+z_index = 12
+layout_mode = 0
+offset_left = 2.0
+offset_top = -12.0
+offset_right = 22.0
+offset_bottom = 10.0
+texture = ExtResource("7_37esg")
+
+[node name="InteractFlower" type="Area2D" parent="PlayerFlowerContact" unique_id=165066600]
+position = Vector2(12, -1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerFlowerContact/InteractFlower" unique_id=1554078116]
+position = Vector2(-6.5, -1)
+shape = SubResource("RectangleShape2D_v6oqn")
+
+[node name="Flower" type="Sprite2D" parent="PlayerFlowerContact" unique_id=127938022]
+z_index = 12
+position = Vector2(-277, -1)
+texture = ExtResource("7_37esg")
+
+[node name="Flower" type="Sprite2D" parent="PlayerFlowerContact/Flower" unique_id=741022041]
+position = Vector2(36, 0)
+texture = ExtResource("7_37esg")
+
+[node name="Flower" type="Sprite2D" parent="PlayerFlowerContact/Flower/Flower" unique_id=977468435]
+position = Vector2(297, 0)
+texture = ExtResource("7_37esg")
+
+[node name="PlayerSinkContact" type="Control" parent="." unique_id=11507583]
+anchors_preset = 0
+offset_left = 212.0
+offset_top = -5.0
+offset_right = 246.0
+offset_bottom = 28.0
+
+[node name="sinkpl" type="TextureRect" parent="PlayerSinkContact" unique_id=798644296]
+layout_mode = 0
+offset_left = 6.0
+offset_top = -4.0
+offset_right = 29.0
+offset_bottom = 20.0
+texture = ExtResource("11_5spf0")
+
+[node name="InteractSink" type="Area2D" parent="PlayerSinkContact" unique_id=1077462495]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerSinkContact/InteractSink" unique_id=1171915594]
+position = Vector2(19, 20)
+shape = SubResource("RectangleShape2D_ct2yb")
+
+[node name="PlayerDesk" type="TextureRect" parent="." unique_id=601352392]
+z_index = 8
+layout_mode = 0
+offset_left = 92.0
+offset_top = 61.0
+offset_right = 158.0
+offset_bottom = 94.0
+texture = ExtResource("5_pq1j3")
+
+[node name="TextureRect" type="TextureRect" parent="PlayerDesk" unique_id=1881808107]
+z_index = 10
+layout_mode = 0
+offset_left = 103.0
+offset_right = 169.0
+offset_bottom = 33.0
+texture = ExtResource("5_pq1j3")
+
+[node name="TextureRect2" type="TextureRect" parent="PlayerDesk" unique_id=476705362]
+z_index = 10
+layout_mode = 0
+offset_left = -103.0
+offset_right = -37.0
+offset_bottom = 33.0
+texture = ExtResource("5_pq1j3")
+
+[node name="DeskYp" type="Marker2D" parent="PlayerDesk" unique_id=1403467724]
+z_index = 7
+position = Vector2(52, 5)
+
+[node name="PlayerChair" type="TextureRect" parent="." unique_id=1615514542]
+z_index = 10
+layout_mode = 0
+offset_left = 110.0
+offset_top = 81.0
+offset_right = 176.0
+offset_bottom = 114.0
+texture = ExtResource("5_dju2y")
+
+[node name="Marker2D" type="Marker2D" parent="PlayerChair" unique_id=2105177177]
+position = Vector2(30, 27)
+
+[node name="DeskTeacher" type="TextureRect" parent="." unique_id=1463041908]
+z_index = 5
+layout_mode = 0
+offset_left = 44.0
+offset_top = 11.0
+offset_right = 110.0
+offset_bottom = 44.0
+texture = ExtResource("6_5aa18")
+
+[node name="DeskY" type="Marker2D" parent="DeskTeacher" unique_id=827162240]
+z_index = 5
+position = Vector2(51, 11)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1523420111]
+libraries/ = SubResource("AnimationLibrary_2hgm5")
+
+[node name="Mateback1" type="Sprite2D" parent="." unique_id=273541585]
+z_index = 27
+position = Vector2(38, 89)
+texture = ExtResource("15_1h0yc")
+
+[node name="Mateback2" type="Sprite2D" parent="." unique_id=899378789]
+z_index = 18
+position = Vector2(213, 136)
+texture = ExtResource("16_ct2yb")
+
+[node name="Mateback4" type="Sprite2D" parent="." unique_id=1444794806]
+z_index = 18
+position = Vector2(244, 87)
+texture = ExtResource("17_b5xur")
+
+[node name="Mateback3" type="Sprite2D" parent="." unique_id=1182672538]
+z_index = 18
+position = Vector2(213, 88)
+texture = ExtResource("17_b5xur")
+
+[node name="TextureRect3" type="TextureRect" parent="." unique_id=120017456]
+z_index = 29
+layout_mode = 0
+offset_left = 7.0
+offset_top = 81.0
+offset_right = 73.0
+offset_bottom = 114.0
+texture = ExtResource("5_dju2y")
+
+[node name="TextureRect10" type="TextureRect" parent="." unique_id=716709939]
+z_index = 19
+layout_mode = 0
+offset_left = 182.0
+offset_top = 81.0
+offset_right = 248.0
+offset_bottom = 114.0
+texture = ExtResource("5_dju2y")
+
+[node name="TextureRect11" type="TextureRect" parent="." unique_id=1988246265]
+z_index = 20
+layout_mode = 0
+offset_left = 213.0
+offset_top = 81.0
+offset_right = 279.0
+offset_bottom = 114.0
+texture = ExtResource("5_dju2y")
+
+[node name="teacher" parent="." unique_id=24720043 instance=ExtResource("18_1h0yc")]
+z_index = 7
+position = Vector2(135, 44)
+
+[node name="DialogueUI" type="CanvasLayer" parent="." unique_id=1616656654]
+
+[node name="Panel" type="Panel" parent="DialogueUI" unique_id=1122024318]
+offset_left = 10.0
+offset_top = 104.0
+offset_right = 305.0
+offset_bottom = 174.0
+
+[node name="NameLabel" type="Label" parent="DialogueUI/Panel" unique_id=202543698]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 1.0
+offset_right = 44.0
+offset_bottom = 24.0
+
+[node name="TextLabel" type="Label" parent="DialogueUI/Panel" unique_id=1600563164]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 19.0
+offset_right = 124.0
+offset_bottom = 42.0
+
+[node name="Choice1" type="Button" parent="DialogueUI/Panel" unique_id=1111327872]
+layout_mode = 0
+offset_left = 5.0
+offset_top = -87.0
+offset_right = 18.0
+offset_bottom = -74.0
+theme_override_font_sizes/font_size = 14
+
+[node name="Choice2" type="Button" parent="DialogueUI/Panel" unique_id=972802147]
+layout_mode = 0
+offset_left = 5.0
+offset_top = -45.0
+offset_right = 18.0
+offset_bottom = -32.0
+theme_override_font_sizes/font_size = 14
+
+[node name="NextButton" type="Button" parent="DialogueUI/Panel" unique_id=97092303]
+layout_mode = 0
+offset_left = 264.0
+offset_top = 43.0
+offset_right = 291.0
+offset_bottom = 68.0
+theme_override_font_sizes/font_size = 12
+text = "→"
+
+[node name="FAAAAAADDEEEE" type="ColorRect" parent="." unique_id=2075829009]
+visible = false
+z_index = 1000
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -218.0
+offset_top = -143.0
+offset_right = 581.0
+offset_bottom = 296.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="indoor" type="Marker2D" parent="." unique_id=601998720]
+position = Vector2(285, 37)
+
+[node name="outdoor" type="Marker2D" parent="." unique_id=676345571]
+position = Vector2(352, 37)
+
+[connection signal="pressed" from="UI/pause" to="." method="_on_pause_pressed"]
+[connection signal="button_down" from="UI/upbtn" to="." method="_on_upbtn_button_down"]
+[connection signal="button_up" from="UI/upbtn" to="." method="_on_upbtn_button_up"]
+[connection signal="button_down" from="UI/downbtn" to="." method="_on_downbtn_button_down"]
+[connection signal="button_up" from="UI/downbtn" to="." method="_on_downbtn_button_up"]
+[connection signal="button_down" from="UI/leftbtn" to="." method="_on_leftbtn_button_down"]
+[connection signal="button_up" from="UI/leftbtn" to="." method="_on_leftbtn_button_up"]
+[connection signal="button_down" from="UI/rightbtn" to="." method="_on_rightbtn_button_down"]
+[connection signal="button_up" from="UI/rightbtn" to="." method="_on_rightbtn_button_up"]
+[connection signal="pressed" from="UI/interactbtn" to="." method="_on_interactbtn_pressed"]
+[connection signal="body_entered" from="PlayerBoardContact/InteractBoard" to="." method="_on_interact_board_body_entered"]
+[connection signal="body_exited" from="PlayerBoardContact/InteractBoard" to="." method="_on_interact_board_body_exited"]
+[connection signal="body_entered" from="PlayerWindowContact/InteractWindow" to="." method="_on_interact_window_body_entered"]
+[connection signal="body_exited" from="PlayerWindowContact/InteractWindow" to="." method="_on_interact_window_body_exited"]
+[connection signal="body_entered" from="PlayerDeskContact/InteractZoneDesk" to="." method="_on_interact_zone_desk_body_entered"]
+[connection signal="body_exited" from="PlayerDeskContact/InteractZoneDesk" to="." method="_on_interact_zone_desk_body_exited"]
+[connection signal="body_entered" from="PlayerFlowerContact/InteractFlower" to="." method="_on_interact_flower_body_entered"]
+[connection signal="body_exited" from="PlayerFlowerContact/InteractFlower" to="." method="_on_interact_flower_body_exited"]
+[connection signal="body_entered" from="PlayerSinkContact/InteractSink" to="." method="_on_interact_sink_body_entered"]
+[connection signal="body_exited" from="PlayerSinkContact/InteractSink" to="." method="_on_interact_sink_body_exited"]
+[connection signal="pressed" from="DialogueUI/Panel/Choice1" to="." method="_on_choice_1_pressed"]
+[connection signal="pressed" from="DialogueUI/Panel/Choice2" to="." method="_on_choice_2_pressed"]
+[connection signal="pressed" from="DialogueUI/Panel/NextButton" to="." method="_on_next_button_pressed"]
